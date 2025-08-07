@@ -34,7 +34,7 @@ Kütüphane iş süreçlerinin dijital ortamda yönetilmesini sağlamak:
  👩💼 Geliştirici
 
 **Berra Özdemir** – Teknik İş Analisti Adayı  
-[LinkedIn](https://www.linkedin.com/in/döndü-özdemir-business-analyst/) (Kendi bağlantını eklemeyi unutma)  
+[LinkedIn](https://www.linkedin.com/in/döndü-özdemir-business-analyst/) 
 `C# | SQL | Business Analysis | Open Banking | API`
 
 ---
