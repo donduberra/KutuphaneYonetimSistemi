@@ -35,11 +35,6 @@ Kütüphane iş süreçlerinin dijital ortamda yönetilmesini sağlamak:
 
 ---
 
-## 🖼️ Ekran Görüntüleri
-
-> 📌 *Buraya ekran görüntüsü ekleyebilirsiniz (örn: giriş ekranı, kitap listesi vb.)*
-
----
 
 ## 🔧 Kurulum ve Çalıştırma
 
@@ -61,7 +56,7 @@ git clone https://github.com/donduberra/KutuphaneYonetimSistemi.git
 ## 👩‍💼 Geliştirici
 
 **Berra Özdemir** – Teknik İş Analisti Adayı  
-[LinkedIn](https://www.linkedin.com/in/) (Kendi bağlantını eklemeyi unutma)  
+[LinkedIn](https://www.linkedin.com/in/döndü-özdemir-business-analyst/) 
 `C# | SQL | Business Analysis | Open Banking | API`
 
 ---
