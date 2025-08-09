@@ -1,4 +1,4 @@
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -18,13 +18,12 @@ namespace KutuphaneYonetimSistemi
         private void button1_Click(object sender, EventArgs e)
         {
             string sifre = " ";
-            using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+            using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
             {
                 try
                 {
 
                     sqlbaglanti.Open();
-
 
                    
                     using (SqlCommand komut = new SqlCommand("Select Sifre From TableKutuphaneYoneticileri Where KullaniciAdi=@p1", sqlbaglanti))

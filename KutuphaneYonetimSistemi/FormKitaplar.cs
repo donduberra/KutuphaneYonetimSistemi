@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;  // DataTable için gerekli
 using System.Data.Common;
-using System.Data.SqlClient;   // SQL kütüphanesi
+using Microsoft.Data.SqlClient;   // SQL kütüphanesi
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -27,7 +27,7 @@ namespace KutuphaneYonetimSistemi
 
             try
             {
-                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
                 {
                     //komut cümlesini yazıyoruz
                     string q = "SELECT * FROM Table_Kitaplar ";
@@ -64,12 +64,13 @@ namespace KutuphaneYonetimSistemi
             verileriGoster();
         }
 
-        private void btnkitapekle_Click(object sender, EventArgs e)
+        //KİTAP EKLEME 
+        private void btnkitapekle_Click(object sender, EventArgs e)  
         {
 
             try
             {
-                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
                 {
                     sqlbaglanti.Open();
 
@@ -97,15 +98,15 @@ namespace KutuphaneYonetimSistemi
             }
 
         }
-
+        //ÖDÜNÇ VERME
         private void btnoduncver_Click(object sender, EventArgs e)
         {
             if (txtBoxKitapId.Text != " ")
             {
-  
+
                     try
                     {
-                        using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                        using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
                         {
                             sqlbaglanti.Open();
 
@@ -162,7 +163,7 @@ namespace KutuphaneYonetimSistemi
             try
             {
 
-                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt = True; TrustServerCertificate = True;"))
                 {
                     sqlbaglanti.Open();
 
@@ -203,7 +204,7 @@ namespace KutuphaneYonetimSistemi
             }
 
         }
-
+        //GECİKME BEDELİ HESAPLAMA
         private void btnhesapla_Click(object sender, EventArgs e)
         {
 
@@ -231,7 +232,7 @@ namespace KutuphaneYonetimSistemi
             {
                 try
                 {
-                    using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                    using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
                     {
                         sqlbaglanti.Open();
 
@@ -288,7 +289,7 @@ namespace KutuphaneYonetimSistemi
         {
             try
             {
-                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
 
                 {
                     string q = "SELECT * FROM Table_Kitaplar WHERE KitapAdi LIKE @a1" +
@@ -356,7 +357,7 @@ namespace KutuphaneYonetimSistemi
                 try
                 {
 
-                    using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True"))
+                    using (SqlConnection sqlbaglanti = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DbKutuphane; Integrated Security = True; Encrypt=True; TrustServerCertificate=True;"))
 
                     {
                         sqlbaglanti.Open();
